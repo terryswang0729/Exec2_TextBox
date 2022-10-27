@@ -28,6 +28,7 @@ namespace Q4
 				MessageBox.Show(ex.Message);
 			}
 
+
 		}
 		private int GetPeoplePrice(int onePersonPrice)
 		{
