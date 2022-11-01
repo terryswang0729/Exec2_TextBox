@@ -32,16 +32,35 @@ namespace Q4
 		}
 		private int GetPeoplePrice(int onePersonPrice)
 		{
-			int totalPeople = GetCalculablePeople();
-			int peoplePrice = onePersonPrice * totalPeople;
-			return peoplePrice;
+		    int totalPeople = GetCalculablePeople();
+			if (totalPeople < 0)
+			{
+				MessageBox.Show("人數請輸入正數");
+			}
+			else
+			{
+				int peoplePrice = onePersonPrice * totalPeople;
+				return peoplePrice;
+			}
+			return 0;
+			
+			
 		}
 		private int GetCarPrice(int oneCarPrice)
 		{
 			int totalCar = GetCalulableCar();
-			int carPrice = oneCarPrice * totalCar;
-			return carPrice;
+			if (totalCar < 0)
+			{
+				MessageBox.Show("車數請輸入正數");
+			}
+			else
+			{
+				int carPrice = oneCarPrice * totalCar;
+				return carPrice;
+			}
+			return 0;
 		}
+
 		private int GetCalculablePeople()
 		{
 			string peopleAmount = peopleTextBox.Text;
